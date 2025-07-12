@@ -30,6 +30,7 @@ export async function submitContactForm(formData: unknown) {
         }
         return { success: true };
     } catch (error) {
+        console.error("Failed to send email",error)
         return { success: false, errors: { server: ["Failed to save message."] } };
     }
 } 

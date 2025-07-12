@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
-import { FaInstagram, FaLinkedin, FaTwitter, FaDownload, FaGithub } from "react-icons/fa";
-import { SiHtml5, SiCss3, SiJavascript, SiFigma, SiBootstrap, SiReact, SiNestjs, SiNodedotjs, SiTsnode, SiExpress } from "react-icons/si";
+import { FaLinkedin, FaDownload, FaGithub } from "react-icons/fa";
+import { SiHtml5, SiCss3, SiJavascript, SiReact, SiTsnode, SiExpress } from "react-icons/si";
 import Image from "next/image";
 
 export default function Hero() {

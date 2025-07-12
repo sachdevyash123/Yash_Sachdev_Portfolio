@@ -2,7 +2,6 @@
 import { useState, useTransition } from "react";
 import { submitContactForm } from "@/app/modules/contact/action";
 import { contactFormSchema } from "@/app/modules/contact/validation";
-import { z } from "zod";
 
 export default function ContactForm() {
     const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });

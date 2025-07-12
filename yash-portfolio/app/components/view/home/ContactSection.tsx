@@ -1,4 +1,4 @@
-import { FaEnvelope, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import ContactForm from "./ContactForm";
 
 export default function ContactSection() {
