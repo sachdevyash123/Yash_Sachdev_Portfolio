@@ -3,9 +3,8 @@ import mongoose from "mongoose";
 import { contactFormSchema } from "./validation";
 import { ContactMessage } from "./model";
 import { sendThankYouEmail } from "./email";
-import { log } from "console";
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/portfolio";
+const MONGODB_URI = process.env.MONGODB_URI!;
 
 async function connectDB() {
     if (mongoose.connection.readyState === 0) {
@@ -25,10 +24,7 @@ export async function submitContactForm(formData: unknown) {
         await message.save();
         // Send thank you email (do not block on error)
         try {
-            console.log("Result email:",result.data.email)
-            console.log("Result name:",result.data.name)
             await sendThankYouEmail(result.data.email, result.data.name);
-            console.log("Email sent successfully")
         } catch (emailError) {
             console.error('Failed to send thank you email:', emailError);
         }

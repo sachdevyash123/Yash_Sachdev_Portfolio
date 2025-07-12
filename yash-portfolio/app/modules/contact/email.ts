@@ -1,5 +1,4 @@
 import sgMail from '@sendgrid/mail';
-console.log(process.env.SENDGRID_API_KEY!)
 sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
 export async function sendThankYouEmail(to: string, name: string) {
@@ -40,8 +39,6 @@ export async function sendThankYouEmail(to: string, name: string) {
     </table>
   `;
     const text = `Hi ${name},\n\nThank you for reaching out! I appreciate your message and will get back to you as soon as possible.\n\nBest regards,\nYash Sachdev`;
-    console.log("TO",to)
-    console.log("From:",process.env.FROM_EMAIL)
     await sgMail.send({
         to,
         from: process.env.FROM_EMAIL!,
