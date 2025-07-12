@@ -29,7 +29,7 @@ export default function Hero() {
                     Software Engineer
                 </h2>
                 <p className="text-base text-[var(--muted-foreground)] mb-4">
-                    Welcome to my portfolio website! I am Yash Sachdev, a passionate front-end developer dedicated to creating engaging and responsive web experiences. With expertise in HTML, CSS, and JavaScript, I focus on aesthetic and high-performance design. Explore my projects for responsive design and interactive features.
+                    Welcome to my portfolio website! I am Yash Sachdev, a passionate Software Engineer dedicated to building scalable full-stack applications. With expertise in Next.js, React.js, Node.js, Express.js, and MongoDB, I focus on creating robust, high-performance solutions. Beyond technical skills, I excel in client handling, project management, leadership, and team collaboration. Explore my projects to see how I combine technical excellence with strong soft skills to deliver exceptional results.
                 </p>
                 <div className="flex flex-wrap gap-4 mb-4">
                     <a href="#contact" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold shadow transition-colors">Contact Me</a>
