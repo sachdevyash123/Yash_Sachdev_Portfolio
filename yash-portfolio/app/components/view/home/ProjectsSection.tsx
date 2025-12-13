@@ -1,5 +1,6 @@
 import { FaExternalLinkAlt,FaCalendarAlt } from "react-icons/fa";
 import { SiPhp, SiMysql, SiLaravel, SiJquery, SiBootstrap, SiNextdotjs, SiTailwindcss } from "react-icons/si";
+import { IconType } from "react-icons";
 
 const projects = [
     {
@@ -71,7 +72,7 @@ const projects = [
     },
 ];
 
-const techIcons: Record<string, any> = {
+const techIcons: Record<string,IconType> = {
     "PHP": SiPhp,
     "Laravel": SiLaravel,
     "MySQL": SiMysql,
