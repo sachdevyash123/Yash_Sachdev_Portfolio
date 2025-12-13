@@ -38,14 +38,14 @@ export default function ThemeSwitcher() {
             onClick={toggleTheme}
             className="rounded-full relative overflow-hidden"
         >
-            <span className="block transition-transform duration-500 ease-in-out transform-gpu">
+            <span className="relative flex items-center justify-center w-5 h-5">
                 <Sun
-                    className={`w-5 h-5 absolute transition-all duration-500 ${theme === "light" ? "opacity-0 scale-75 rotate-45" : "opacity-100 scale-100 rotate-0"}`}
+                    className={`w-5 h-5 absolute inset-0 transition-all duration-500 ${theme === "light" ? "opacity-0 scale-75 rotate-45" : "opacity-100 scale-100 rotate-0"}`}
                 />
                 <Moon
-                    className={`w-5 h-5 absolute transition-all duration-500 ${theme === "light" ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-75 -rotate-45"}`}
+                    className={`w-5 h-5 absolute inset-0 transition-all duration-500 ${theme === "light" ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-75 -rotate-45"}`}
                 />
             </span>
         </Button>
     );
-} 
+}

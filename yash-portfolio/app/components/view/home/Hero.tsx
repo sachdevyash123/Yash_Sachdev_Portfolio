@@ -1,12 +1,13 @@
 "use client";
 import { useState, useEffect } from "react";
 import { FaLinkedin, FaDownload, FaGithub } from "react-icons/fa";
-import { SiHtml5, SiCss3, SiJavascript, SiReact, SiTsnode, SiExpress } from "react-icons/si";
+import { SiHtml5,SiJavascript, SiReact,SiExpress,SiPhp,SiLaravel } from "react-icons/si";
 import Image from "next/image";
 
 export default function Hero() {
     const [typed, setTyped] = useState("");
-    const name = "Hi I’m Yash Sachdev";
+    const name = "Hi I'm Yash Sachdev";
+    
     useEffect(() => {
         let i = 0;
         setTyped("");
@@ -17,6 +18,7 @@ export default function Hero() {
         }, 70);
         return () => clearInterval(typing);
     }, []);
+
     return (
         <section className="w-full min-h-[70vh] flex flex-col md:flex-row items-center justify-between gap-8 py-16 px-4">
             {/* Left: Text Content */}
@@ -28,53 +30,191 @@ export default function Hero() {
                 <h2 className="text-2xl font-semibold mb-2 text-cyan-400">
                     Software Engineer
                 </h2>
-                <p className="text-base text-[var(--muted-foreground)] mb-4">
-                    Welcome to my portfolio website! I am Yash Sachdev, a passionate Software Engineer dedicated to building scalable full-stack applications. With expertise in Next.js, React.js, Node.js, Express.js, and MongoDB, I focus on creating robust, high-performance solutions. Beyond technical skills, I excel in client handling, project management, leadership, and team collaboration. Explore my projects to see how I combine technical excellence with strong soft skills to deliver exceptional results.
+                <p className="text-base text-[var(--muted-foreground)] mb-6 leading-relaxed">
+                    Welcome to my portfolio! I'm Yash Sachdev, a passionate Software Engineer specializing in building scalable, high-performance full-stack applications. I bring strong expertise in Next.js, React.js, Node.js, Express.js, MongoDB, along with PHP and Laravel, to craft reliable and efficient digital solutions.
                 </p>
-                <div className="flex flex-wrap gap-4 mb-4">
-                    <a href="#contact" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold shadow transition-colors">Contact Me</a>
-                    <a href="https://github.com/sachdevyash123" target="_blank" rel="noopener noreferrer" className="text-2xl text-gray-700 dark:text-white hover:text-cyan-400 transition-colors"><FaGithub /></a>
-                    <a href="https://www.linkedin.com/in/yash-sachdev-08274a229/" target="_blank" rel="noopener noreferrer" className="text-2xl text-gray-700 dark:text-white hover:text-cyan-400 transition-colors"><FaLinkedin /></a>
+                <p className="text-base text-[var(--muted-foreground)] mb-6 leading-relaxed">
+                    Beyond technical excellence, I excel in client communication, project management, leadership, and collaborative teamwork, ensuring ideas are transformed into successful, real-world products. Explore my work to see how I blend modern technologies with strong problem-solving and people skills to deliver impactful results.
+                </p>
+                
+                {/* Buttons and Social Links */}
+                <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+                    {/* Contact Button */}
+                    <a 
+                        href="#contact" 
+                        className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                    >
+                        Contact Me
+                    </a>
+                    
+                    {/* Social Links */}
+                    <div className="flex items-center gap-4">
+                        <a 
+                            href="https://github.com/sachdevyash123" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="w-12 h-12 flex items-center justify-center text-2xl text-gray-700 dark:text-white hover:text-cyan-400 dark:hover:text-cyan-400 transition-all duration-300 transform hover:scale-110 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+                            aria-label="GitHub Profile"
+                        >
+                            <FaGithub />
+                        </a>
+                        <a 
+                            href="https://www.linkedin.com/in/yash-sachdev-08274a229/" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="w-12 h-12 flex items-center justify-center text-2xl text-gray-700 dark:text-white hover:text-cyan-400 dark:hover:text-cyan-400 transition-all duration-300 transform hover:scale-110 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+                            aria-label="LinkedIn Profile"
+                        >
+                            <FaLinkedin />
+                        </a>
+                    </div>
                 </div>
-                <a href="/assets/Yash Sachdev_Resume(1).pdf" download className="flex items-center gap-2 text-cyan-400 hover:underline mt-2">
-                    <FaDownload /> Download CV
+
+                {/* Download CV */}
+                <a 
+                    href="/assets/Yash Sachdev_Resume(1).pdf" 
+                    download 
+                    className="flex items-center gap-2 text-cyan-500 dark:text-cyan-400 hover:text-cyan-600 dark:hover:text-cyan-300 font-medium mt-2 transition-all duration-300 group"
+                >
+                    <FaDownload className="group-hover:animate-bounce" /> 
+                    Download CV
                 </a>
             </div>
+
             {/* Right: Profile Image and Floating Icons */}
-            <div className="flex-1 flex items-center justify-center relative min-h-[320px]">
-                {/* Blurred Gradient Blob */}
-                <div className="absolute w-[22rem] h-[22rem] bg-gradient-to-br from-cyan-400 via-blue-300 to-purple-300 rounded-full blur-2xl opacity-60 -z-10" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }} />
-                {/* Profile image */}
-                <div className="w-72 h-72 rounded-full bg-white/10 flex items-center justify-center shadow-2xl border-4 border-white dark:border-gray-800 relative">
-                    <Image
-                        src="/assets/Yash_Sachdev_image.jpeg"
-                        alt="Yash Sachdev"
-                        width={400}
-                        height={280}
-                        className="rounded-full object-cover shadow-lg"
-                        priority
-                    />
-                    {/* Floating Tech Icons - circular arrangement */}
-                    <span className="absolute" style={{ top: '-92px', left: '50%', transform: 'translateX(-50%)' }} title="Bootstrap">
-                        <SiReact size={28} className="text-purple-400 bg-white/80 rounded-full p-1 shadow" />
-                    </span>
-                    <span className="absolute" style={{ top: '30px', right: '-24px' }} title="JavaScript">
-                        <SiJavascript size={28} className="text-yellow-300 bg-white/80 rounded-full p-1 shadow" />
-                    </span>
-                    <span className="absolute" style={{ bottom: '30px', right: '-24px' }} title="CSS3">
-                        <SiCss3 size={28} className="text-blue-400 bg-white/80 rounded-full p-1 shadow" />
-                    </span>
-                    <span className="absolute" style={{ bottom: '-92px', left: '50%', transform: 'translateX(-50%)' }} title="HTML5">
-                        <SiHtml5 size={28} className="text-orange-500 bg-white/80 rounded-full p-1 shadow" />
-                    </span>
-                    <span className="absolute" style={{ bottom: '30px', left: '-24px' }} title="Figma">
-                        <SiTsnode size={28} className="text-pink-400 bg-white/80 rounded-full p-1 shadow" />
-                    </span>
-                    <span className="absolute" style={{ top: '30px', left: '-24px' }} title="CSS3">
-                        <SiExpress size={28} className="text-blue-400 bg-white/80 rounded-full p-1 shadow" />
-                    </span>
+            <div className="flex-1 flex items-center justify-center relative min-h-[500px] w-full">
+                {/* Blurred Gradient Blob with animation */}
+                <div 
+                    className="absolute w-[24rem] h-[24rem] bg-gradient-to-br from-cyan-400 via-blue-300 to-purple-300 rounded-full blur-2xl opacity-60 animate-pulse" 
+                    style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)', zIndex: 0 }} 
+                />
+                
+                {/* Container for profile and icons */}
+                <div className="relative w-80 h-120">
+                    {/* Profile image */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-80 h-100 rounded-full bg-white/10 flex items-center justify-center shadow-2xl border-4 border-white dark:border-gray-800 overflow-hidden group">
+                            <Image
+                                src="/assets/yash_linkedin.jpeg"
+                                alt="Yash Sachdev"
+                                width={320}
+                                height={320}
+                                className="rounded-full object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+                                priority
+                            />
+                        </div>
+                    </div>
+                    
+                    {/* Floating Tech Icons - perfectly positioned around the circle */}
+                    {/* Top */}
+                    <div 
+                        className="absolute left-1/2 -translate-x-1/2 transition-all duration-300 hover:scale-125 cursor-pointer animate-float" 
+                        style={{ 
+                            top: '-20px',
+                            animationDelay: '0s',
+                            zIndex: 10
+                        }} 
+                        title="React"
+                    >
+                        <div className="w-14 h-14 flex items-center justify-center bg-white dark:bg-gray-800 rounded-full shadow-lg">
+                            <SiReact size={32} className="text-cyan-400" />
+                        </div>
+                    </div>
+
+                    {/* Top Right */}
+                    <div 
+                        className="absolute transition-all duration-300 hover:scale-125 cursor-pointer animate-float" 
+                        style={{ 
+                            top: '40px', 
+                            right: '-20px',
+                            animationDelay: '0.5s',
+                            zIndex: 10
+                        }} 
+                        title="JavaScript"
+                    >
+                        <div className="w-14 h-14 flex items-center justify-center bg-white dark:bg-gray-800 rounded-full shadow-lg">
+                            <SiJavascript size={32} className="text-yellow-400" />
+                        </div>
+                    </div>
+
+                    {/* Bottom Right */}
+                    <div 
+                        className="absolute transition-all duration-300 hover:scale-125 cursor-pointer animate-float" 
+                        style={{ 
+                            bottom: '40px', 
+                            right: '-20px',
+                            animationDelay: '1s',
+                            zIndex: 10
+                        }} 
+                        title="PHP"
+                    >
+                        <div className="w-14 h-14 flex items-center justify-center bg-white dark:bg-gray-800 rounded-full shadow-lg">
+                            <SiPhp size={32} className="text-blue-500" />
+                        </div>
+                    </div>
+
+                    {/* Bottom */}
+                    <div 
+                        className="absolute left-1/2 -translate-x-1/2 transition-all duration-300 hover:scale-125 cursor-pointer animate-float" 
+                        style={{ 
+                            bottom: '-20px',
+                            animationDelay: '1.5s',
+                            zIndex: 10
+                        }} 
+                        title="HTML5"
+                    >
+                        <div className="w-14 h-14 flex items-center justify-center bg-white dark:bg-gray-800 rounded-full shadow-lg">
+                            <SiHtml5 size={32} className="text-orange-500" />
+                        </div>
+                    </div>
+
+                    {/* Bottom Left */}
+                    <div 
+                        className="absolute transition-all duration-300 hover:scale-125 cursor-pointer animate-float" 
+                        style={{ 
+                            bottom: '40px', 
+                            left: '-20px',
+                            animationDelay: '2s',
+                            zIndex: 10
+                        }} 
+                        title="Laravel"
+                    >
+                        <div className="w-14 h-14 flex items-center justify-center bg-white dark:bg-gray-800 rounded-full shadow-lg">
+                            <SiLaravel size={32} className="text-blue-600" />
+                        </div>
+                    </div>
+
+                    {/* Top Left */}
+                    <div 
+                        className="absolute transition-all duration-300 hover:scale-125 cursor-pointer animate-float" 
+                        style={{ 
+                            top: '40px', 
+                            left: '-20px',
+                            animationDelay: '2.5s',
+                            zIndex: 10
+                        }} 
+                        title="Express.js"
+                    >
+                        <div className="w-14 h-14 flex items-center justify-center bg-white dark:bg-gray-800 rounded-full shadow-lg">
+                            <SiExpress size={32} className="text-gray-700 dark:text-white" />
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <style jsx>{`
+                @keyframes float {
+                    0%, 100% {
+                        transform: translateY(0px);
+                    }
+                    50% {
+                        transform: translateY(-10px);
+                    }
+                }
+                .animate-float {
+                    animation: float 3s ease-in-out infinite;
+                }
+            `}</style>
         </section>
     );
-} 
+}

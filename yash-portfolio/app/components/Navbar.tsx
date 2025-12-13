@@ -39,7 +39,9 @@ export default function Navbar() {
                             {link.name}
                         </Link>
                     ))}
-                    <ThemeSwitcher />
+                    <div className="flex items-center h-full">
+                        <ThemeSwitcher />
+                    </div>
                 </div>
                 {/* Mobile Hamburger */}
                 <button
@@ -70,4 +72,4 @@ export default function Navbar() {
             )}
         </header>
     );
-} 
+}
