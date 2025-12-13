@@ -11,7 +11,7 @@ export default function ContactSection() {
                         Get In Touch
                     </h2>
                     <p className="text-gray-600 dark:text-gray-400 text-lg mb-4">
-                        Let's discuss your next project or opportunity
+                        Let&apos;s discuss your next project or opportunity
                     </p>
                     <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto rounded-full"></div>
                 </div>
@@ -23,10 +23,10 @@ export default function ContactSection() {
                         <div className="bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl shadow-lg p-8 text-white">
                             <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
                                 <FaPaperPlane className="w-6 h-6" />
-                                Let's Connect!
+                                Let&apos;s Connect!
                             </h3>
                             <p className="text-white/90 text-base leading-relaxed mb-6">
-                                I'm always excited to discuss new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!
+                                I&apos;m always excited to discuss new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!
                             </p>
 
                             {/* Email */}
@@ -112,7 +112,7 @@ export default function ContactSection() {
                                     Send Me a Message
                                 </h3>
                                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                                    Fill out the form below and I'll get back to you as soon as possible.
+                                    Fill out the form below and I&apos;ll get back to you as soon as possible.
                                 </p>
                             </div>
                             <ContactForm />

@@ -1,4 +1,4 @@
-import { FaExternalLinkAlt, FaGithub, FaCalendarAlt } from "react-icons/fa";
+import { FaExternalLinkAlt,FaCalendarAlt } from "react-icons/fa";
 import { SiPhp, SiMysql, SiLaravel, SiJquery, SiBootstrap, SiNextdotjs, SiTailwindcss } from "react-icons/si";
 
 const projects = [

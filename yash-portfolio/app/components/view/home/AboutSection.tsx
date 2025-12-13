@@ -1,6 +1,5 @@
 'use client';
 import { FaEnvelope, FaMapMarkerAlt, FaRegCopy, FaCheckCircle } from "react-icons/fa";
-import { SiPhp, SiLaravel, SiNextdotjs, SiReact, SiNodedotjs, SiTypescript, SiMongodb, SiRedis } from "react-icons/si";
 import { useState } from "react";
 
 export default function AboutSection() {
@@ -50,7 +49,7 @@ export default function AboutSection() {
                                 I bring strong expertise in both <span className="font-semibold text-blue-600 dark:text-blue-400">frontend</span> and <span className="font-semibold text-green-600 dark:text-green-400">backend</span> development, specializing in creating scalable systems with MongoDB, Redis, and Qdrant. Additionally, I have solid experience with <span className="font-semibold text-indigo-600 dark:text-indigo-400">PHP</span> and <span className="font-semibold text-red-600 dark:text-red-400">Laravel</span> for building robust server-side applications.
                             </p>
                             <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-                                I thrive in collaborative environments, love learning new technologies, and am driven by solving real-world problems through clean, efficient code. Let's build something amazing together! 🚀
+                                I thrive in collaborative environments, love learning new technologies, and am driven by solving real-world problems through clean, efficient code. Let&apos;s build something amazing together! 🚀
                             </p>
                         </div>
 

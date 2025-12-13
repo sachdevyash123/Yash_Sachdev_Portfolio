@@ -31,7 +31,7 @@ export default function Hero() {
                     Software Engineer
                 </h2>
                 <p className="text-base text-[var(--muted-foreground)] mb-6 leading-relaxed">
-                    Welcome to my portfolio! I'm Yash Sachdev, a passionate Software Engineer specializing in building scalable, high-performance full-stack applications. I bring strong expertise in Next.js, React.js, Node.js, Express.js, MongoDB, along with PHP and Laravel, to craft reliable and efficient digital solutions.
+                    Welcome to my portfolio! I&apos;m Yash Sachdev, a passionate Software Engineer specializing in building scalable, high-performance full-stack applications. I bring strong expertise in Next.js, React.js, Node.js, Express.js, MongoDB, along with PHP and Laravel, to craft reliable and efficient digital solutions.
                 </p>
                 <p className="text-base text-[var(--muted-foreground)] mb-6 leading-relaxed">
                     Beyond technical excellence, I excel in client communication, project management, leadership, and collaborative teamwork, ensuring ideas are transformed into successful, real-world products. Explore my work to see how I blend modern technologies with strong problem-solving and people skills to deliver impactful results.
