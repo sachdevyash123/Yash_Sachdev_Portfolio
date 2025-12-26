@@ -1,5 +1,5 @@
 import { FaExternalLinkAlt,FaCalendarAlt } from "react-icons/fa";
-import { SiPhp, SiMysql, SiLaravel, SiJquery, SiBootstrap, SiNextdotjs, SiTailwindcss } from "react-icons/si";
+import { SiPhp, SiMysql, SiLaravel, SiJquery, SiBootstrap, SiNextdotjs, SiTailwindcss, SiReact } from "react-icons/si";
 import { IconType } from "react-icons";
 
 const projects = [
@@ -9,6 +9,7 @@ const projects = [
         description:
             "Currently maintaining and enhancing the Categorizr Admin Panel by resolving critical issues across multiple modules including Manage Users, eReceipts, Store Collection, Store Map, and Mobile Uploads. Successfully implemented the View Tax Type module from scratch and developed a secure Reset Password functionality to improve user experience and system security.",
         tech: ["PHP", "MySQL", "AJAX", "jQuery"],
+        link:"https://categorizr.com/emailserver/admin",
         category: "Backend & Admin",
         status: "ongoing",
     },
@@ -17,8 +18,8 @@ const projects = [
         duration: "Oct 2024 - Present",
         description:
             "Leading the development of Luta's backend admin panel, implementing comprehensive modules for Customer Management, Customer App Styling, SSO Integration, CSR Management, Meta Quizzes, and Meta Challenges. Architected and executed a complete migration to a multi-tenant system, refactoring all APIs, cron jobs, and database structures to support customer-based isolation. Resolved numerous issues in existing modules while maintaining system stability.",
-        tech: ["PHP", "Laravel", "MySQL", "jQuery", "AdminLTE", "Bootstrap"],
-        link:"https://dev.weisetechdev.com/rogersbetatesting/public/admin",
+        tech: ["Laravel","PHP", "MySQL", "jQuery", "AdminLTE", "Bootstrap"],
+        link:"https://api.lutaapp.com",
         category: "Full Stack",
         status: "ongoing",
     },
@@ -27,7 +28,7 @@ const projects = [
         duration: "Nov 2024 - Present",
         description:
             "Developed a comprehensive backend system with database architecture for managing users, processed/unprocessed orders, product SKUs, and email parsing. Built robust admin sections with RESTful APIs for incoming email management, email parsing results, and unprocessed orders. Implemented automated data processing workflows to streamline order management operations.",
-        tech: ["PHP", "Laravel", "MySQL", "REST API"],
+        tech: ["Laravel","PHP", "MySQL", "REST API"],
         link:"https://dev.weisetechdev.com/splparts/public/admin",
         category: "Backend & API",
         status: "ongoing",
@@ -57,7 +58,7 @@ const projects = [
         duration: "Feb 2025 - March 2025",
         description:
             "Built comprehensive admin dashboard frontend with complete CRUD operations for movies, web series, and episodes. Integrated backend services for seamless content management.",
-        tech: ["MongoDB", "Express.js", "React.js", "Node.js"],
+        tech: ["React.js", "Express.js","MongoDB" , "Node.js"],
         category: "Full Stack",
         status: "completed",
     },
@@ -66,7 +67,7 @@ const projects = [
         duration: "June 2024 - Oct 2024",
         description:
             "Developed full-stack student management application with complete CRUD functionality for student data management using MERN stack.",
-        tech: ["MongoDB", "Express.js", "React.js", "Node.js"],
+        tech: ["React.js", "Express.js", "MongoDB", "Node.js"],
         category: "Full Stack",
         status: "completed",
     },
@@ -80,6 +81,7 @@ const techIcons: Record<string,IconType> = {
     "Bootstrap": SiBootstrap,
     "Next.js": SiNextdotjs,
     "Tailwind CSS": SiTailwindcss,
+    "React.js": SiReact
 };
 
 export default function ProjectsSection() {
