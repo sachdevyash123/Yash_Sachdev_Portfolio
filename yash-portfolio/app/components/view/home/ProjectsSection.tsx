@@ -157,13 +157,16 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
             {/* Status Badge */}
             <div className="absolute top-4 right-4 z-10">
                 {isOngoing ? (
-                    <div className="flex items-center gap-2 bg-green-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
-                        <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                        IN PROGRESS
+                    <div className="flex items-center gap-1.5 sm:gap-2 bg-green-500 text-white text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full shadow-lg">
+                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full animate-pulse"></div>
+                        <span className="hidden xs:inline">IN PROGRESS</span>
+                        <span className="xs:hidden">ACTIVE</span>
                     </div>
                 ) : (
-                    <div className="flex items-center gap-2 bg-blue-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
-                        ✓ COMPLETED
+                    <div className="flex items-center gap-1.5 sm:gap-2 bg-blue-500 text-white text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full shadow-lg">
+                        <span>✓</span>
+                        <span className="hidden xs:inline">COMPLETED</span>
+                        <span className="xs:hidden">DONE</span>
                     </div>
                 )}
             </div>
@@ -174,17 +177,17 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
             {/* Content */}
             <div className="relative p-6 space-y-4">
                 {/* Header */}
-                <div className="flex items-start gap-4 pr-24">
+                <div className="flex items-start gap-3 sm:gap-4 pr-20 sm:pr-32">
                     {TechIcon && (
-                        <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                            <TechIcon className="w-6 h-6 text-white" />
+                        <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <TechIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                         </div>
                     )}
                     <div className="flex-1 min-w-0">
-                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors leading-tight">
+                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors leading-tight">
                             {project.name}
                         </h3>
-                        <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                        <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
                             <FaCalendarAlt className="w-3 h-3" />
                             <span>{project.duration}</span>
                         </div>
